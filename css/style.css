@@ -10,6 +10,63 @@ ul {
   list-style-type: none;
 }
 
+#popupNewTask{
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  display:none;
+  position:fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+  overflow:auto;
+}
+
+
+#popupNewTask form{
+  opacity:inherit;
+  position:absolute;
+  width: 50%;
+  margin-left: -25%;
+  left:50%;
+  top:17%;
+  padding:  5%;
+  border-radius: 5px;
+  background-color: #f5f5dc;
+}
+
+.closePopUp{
+  display: block;
+  width: 100%;
+  overflow:auto;
+  height: 35px;
+}
+.closePopUp p{
+  margin: 0;
+  display: block;
+  position:absolute;
+  width: 50%;
+  margin-left: -25%;
+  left:50%;
+  border-style: solid;
+  text-align: center;
+  width: 50%;
+  cursor:pointer;
+}
+
+form input,form label,form textarea{
+  width:80%;
+  border-width: 2px;
+  margin : 5px;
+}
+
+form input {
+  height: 20px;
+}
+
+form textarea{
+  height: 80px;
+}
+
 #tasks {
   width: 500px;
 }
@@ -42,5 +99,5 @@ ul {
   content: 'duration: ';
 }
 
-.duration.short { color: forestGreen;}
-.duration.long  { color: indianRed;}
+.duration.short { color: indianRed;}
+.duration.long  { color: forestGreen;}

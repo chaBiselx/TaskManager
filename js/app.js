@@ -110,6 +110,7 @@ window.TaskManager = (() => {
 
 
 $(() => {
+  div_hide();
   TaskManager.tasks.push(new TaskManager.Task('tache 1', 10, 'test1'));
   TaskManager.tasks.push(new TaskManager.Task('tache 2', 20, 'test2'));
   TaskManager.tasks.push(new TaskManager.Task('tache 3', 15, 'test1'));
@@ -120,13 +121,12 @@ $(() => {
   *button
   */
   $( "#addTask" ).click( () => {
-    alert('addTask');
-    //TODO formullaire d'un nouvelle tache
+    div_show();
   });
 
   $( ".validButton" ).click( () => {
     //alert('validButton');
-    this.parentNode.parentNode.css('background-color' , 'red');
+    //this.parentNode.parentNode.css('background-color' , 'red');
     //TODO verrouillé button et changer couleur fond
   });
 
@@ -138,4 +138,20 @@ $(() => {
   $( ".deleteButton" ).click( () => {
     alert('deleteButton');
   });
+
+  $( ".closePopUp" ).click( () => {
+    div_hide("fast");
+  });
+
+  /*
+  * function
+  */
+  //Function To Display Popup
+  function div_show() {
+    $('#popupNewTask').show("slow");
+  }
+  //Function to Hide Popup
+  function div_hide( option ){
+    $('#popupNewTask').hide(option);
+  }
 });
