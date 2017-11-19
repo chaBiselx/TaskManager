@@ -13,15 +13,15 @@
     <div id='taskmanager'></div>
     <!-- start Popup form  -->
     <div id="popupNewTask">
-      <form action="#" id="form" method="post" name="form">
+      <form action="#" id="formPopup" method="post" name="form">
         <div class="closePopUp">
           <p>Fermer X</p>
         </div>
-        <h2>Nouvelle tâche </h2>
+        <h2 id="formPopupTitle"></h2>
         <hr>
         <input id="taskName" name="taskName" placeholder="Tâche" type="text" maxlength="25">
         <input id="taskDuration" name="taskDuration" placeholder="1" type="number" min="1">
-        <textarea id="taskMsg" name="taskMsg" placeholder="Message" maxlength="500"></textarea>
+        <textarea id="taskMsg" name="taskMsg" placeholder="Tags" maxlength="500"></textarea>
         <input type="submit" name="validNewTask" value="Valider">
       </form>
     </div>

@@ -121,6 +121,7 @@ $(() => {
   *button
   */
   $( "#addTask" ).click( () => {
+    $('#formPopupTitle').text("Nouvelle tâche ")
     div_show();
   });
 
@@ -131,8 +132,8 @@ $(() => {
   });
 
   $( ".modifyButton" ).click( () => {
-    alert('modifyButton');
-
+    $('#formPopupTitle').text("Modifier tâche")
+    div_show('nom',50,'tags25');
   });
 
   $( ".deleteButton" ).click( () => {
@@ -147,8 +148,13 @@ $(() => {
   * function
   */
   //Function To Display Popup
-  function div_show() {
+  function div_show(name = '', duration = 1, tags = null) {
+    $('#taskName').val(name);
+    $('#taskDuration').val(duration);
+    $('#taskMsg').empty();
+    $('#taskMsg').append(tags);
     $('#popupNewTask').show("slow");
+
   }
   //Function to Hide Popup
   function div_hide( option ){
